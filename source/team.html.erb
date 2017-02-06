@@ -65,20 +65,16 @@ title: Airbnb team
 
     <div class="container text-center padded">
   <h1>Our team</h1>
-  <ul class="list-inline">
+
+  <ul class="list-inline text-center">
+  <% ["karelle", "Pedro", "Gabrielle"].each do |member| %>
     <li>
-      <h2>Paul</h2>
-      <img src="images/avatar1.jpeg" alt="" height="100" width="100" class="img-circle">
+      <%= image_tag "#{member}.jpg", class: "img-circle avatar-large" %>
+      <h3><%= member.capitalize %></h3>
     </li>
-    <li>
-      <h2>John</h2>
-      <img src="images/avatar2.jpg" alt="" height="100" width="100" class="img-circle">
-    </li>
-    <li>
-      <h2>Georges</h2>
-      <img src="images/avatar3.jpg" alt="" height="100" width="100" class="img-circle">
-    </li>
-  </ul>
+  <% end %>
+</ul>
+
 
   <h3 class="padded">
     <a href="mailto:contact@airbnb.com">
